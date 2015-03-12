@@ -31,6 +31,6 @@ source deactivate
 
 export PATH=$p
 
-echo "export PATH=$(pwd)/miniconda/bin:$PATH" > source_snakemake.sh
+echo "export PATH=$pref/bin:$PATH" > source_snakemake.sh
 echo "source activate sci3" >> source_snakemake.sh
 
