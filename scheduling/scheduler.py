@@ -116,7 +116,7 @@ if __name__ == '__main__':
 
     #print("Passed bidniz:", args.snakescript, args.dependencies, file=sys.stderr)
     #print("Passed args:", args, file=sys.stderr)
-    sj = SnakeJobSbatch(args.snakescript, dependencies=args.dependencies, config=json.load(open("scheduler.conf")))
+    sj = SnakeJobSbatch(args.snakescript, dependencies=args.dependencies, config=json.load(open("scheduler.json")))
     try:
         sj.schedule()
     except UndefinedJobRule as err:

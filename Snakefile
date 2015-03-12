@@ -2,4 +2,6 @@ localrules: all
 
 rule clean:
     shell:
-        "echo "add cleanup code here"
+        """
+	echo "add cleanup code here"
+	"""
