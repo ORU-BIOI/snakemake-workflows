@@ -2,7 +2,7 @@
 """
 Submit this clustering script for sbatch to snakemake with:
 
-    snakemake -j 99 --debug --immediate-submit --cluster 'Snakefile-sbatch.py {dependencies}'
+    snakemake -j 99 --debug --immediate-submit --cluster 'scheduler.py {dependencies}'
 """
 import argparse
 import sys
@@ -86,7 +86,7 @@ class SnakeJobSbatch(SnakeJob):
                     'partition': rule_conf['partition'],
                     'cores': rule_conf['cores'],
                     'account': self.config['sbatch_general']['account'],
-                    'log_file': self.ofiles[0] + '-slurm.out' if len(self.ofiles) > 0 else 'snakemake-{0}-slurm.out'.format(self.rule),
+                    'log_file': self.ofiles[0].strip("/") + '-slurm.out' if len(self.ofiles) > 0 else 'snakemake-{0}-slurm.out'.format(self.rule),
                     'extra_parameters': rule_conf.get('extra_parameters', "")
             }
             sbatch_cmd = """sbatch --output={log_file} {dep_str} -A {account} -p {partition} -n {cores} -t {days}-{hours}:{minutes}:00 \
@@ -116,7 +116,7 @@ if __name__ == '__main__':
 
     #print("Passed bidniz:", args.snakescript, args.dependencies, file=sys.stderr)
     #print("Passed args:", args, file=sys.stderr)
-    sj = SnakeJobSbatch(args.snakescript, dependencies=args.dependencies, config=json.load(open("config_sbatch.json")))
+    sj = SnakeJobSbatch(args.snakescript, dependencies=args.dependencies, config=json.load(open("scheduler.conf")))
     try:
         sj.schedule()
     except UndefinedJobRule as err:
