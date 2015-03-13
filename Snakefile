@@ -1,3 +1,4 @@
+configfile: "config.json"
 localrules: all
 
 rule clean:
