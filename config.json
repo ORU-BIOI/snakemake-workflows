@@ -26,32 +26,32 @@
         },
         "units": {
             "P911_101_4":
-                ["/proj/XX/4_140207_AC3NVGACXX_P911_101_1.fastq.gz",
-                 "/proj/XX/4_140207_AC3NVGACXX_P911_101_2.fastq.gz"],
+                ["/proj/XX/4_P911_101_1.fastq.gz",
+                 "/proj/XX/4_P911_101_2.fastq.gz"],
             "P911_101_7":
-                ["/proj/XX/7_140220_AC3UBFACXX_P911_101_1.fastq.gz",
-                 "/proj/XX/7_140220_AC3UBFACXX_P911_101_2.fastq.gz"],
+                ["/proj/XX/7_P911_101_1.fastq.gz",
+                 "/proj/XX/7_P911_101_2.fastq.gz"],
             "P911_102_4":
-                ["/proj/XX/4_140207_AC3NVGACXX_P911_102_1.fastq.gz",
-                 "/proj/XX/4_140207_AC3NVGACXX_P911_102_2.fastq.gz"],
+                ["/proj/XX/4_P911_102_1.fastq.gz",
+                 "/proj/XX/4_P911_102_2.fastq.gz"],
             "P911_102_7":
-                ["/proj/XX/7_140220_AC3UBFACXX_P911_102_1.fastq.gz",
-                 "/proj/XX/7_140220_AC3UBFACXX_P911_102_2.fastq.gz"],
+                ["/proj/XX/7_P911_102_1.fastq.gz",
+                 "/proj/XX/7_P911_102_2.fastq.gz"],
             "P911_103":
-                ["/proj/XX/5_140207_AC3NVGACXX_P911_103_1.fastq.gz",
-                 "/proj/XX/5_140207_AC3NVGACXX_P911_103_2.fastq.gz"],
+                ["/proj/XX/P911_103_1.fastq.gz",
+                 "/proj/XX/P911_103_2.fastq.gz"],
             "P911_104":
-                ["/proj/XX/5_140207_AC3NVGACXX_P911_104_1.fastq.gz",
-                 "/proj/XX/5_140207_AC3NVGACXX_P911_104_2.fastq.gz"],
+                ["/proj/XX/P911_104_1.fastq.gz",
+                 "/proj/XX/P911_104_2.fastq.gz"],
             "P911_105":
-                ["/proj/XX/5_140207_AC3NVGACXX_P911_105_1.fastq.gz",
-                 "/proj/XX/5_140207_AC3NVGACXX_P911_105_2.fastq.gz"],
+                ["/proj/XX/P911_105_1.fastq.gz",
+                 "/proj/XX/P911_105_2.fastq.gz"],
             "P911_106_4":
-                ["/proj/XX/4_140207_AC3NVGACXX_P911_106_1.fastq.gz",
-                 "/proj/XX/4_140207_AC3NVGACXX_P911_106_2.fastq.gz"],
+                ["/proj/XX/4_P911_106_1.fastq.gz",
+                 "/proj/XX/4_P911_106_2.fastq.gz"],
             "P911_106_7":
-                ["/proj/XX/7_140220_AC3UBFACXX_P911_106_1.fastq.gz",
-                 "/proj/XX/7_140220_AC3UBFACXX_P911_106_2.fastq.gz"]
+                ["/proj/XX/7_P911_106_1.fastq.gz",
+                 "/proj/XX/7_P911_106_2.fastq.gz"]
         },
         "load_env": "module load bioinfo-tools bowtie2/2.2.3"
     },
