@@ -84,7 +84,7 @@ rule bam_measure_insert_size:
         pdf="{prefix}.insert_size_histogram.pdf"
     shell:
         """
-        java -jar {config[samtools_rules][picard_jars]}/CollectInsertSizeMetrics.jar \
+        java -jar {config[samtools_rules][picard_jars]} CollectInsertSizeMetrics \
             INPUT={input} \
             OUTPUT={output.txt} \
             HISTOGRAM_FILE={output.pdf}
@@ -110,7 +110,7 @@ rule fasta_dict:
         "{prefix}.dict"
     shell:
         """
-        java -jar {config[samtools_rules][picard_jars]}/CreateSequenceDictionary.jar \
+        java -jar {config[samtools_rules][picard_jars]} CreateSequenceDictionary \
             REFERENCE={input} \
             OUTPUT={output}
         """
@@ -129,7 +129,7 @@ rule remove_mark_duplicates:
     shell:
         """
         java {params.java_opt} -XX:ParallelGCThreads={threads} \
-            -jar {config[samtools_rules][picard_jars]}/MarkDuplicates.jar \
+            -jar {config[samtools_rules][picard_jars]} MarkDuplicates \
             INPUT={input} \
             OUTPUT={output[0]} \
             METRICS_FILE={output[1]} \
