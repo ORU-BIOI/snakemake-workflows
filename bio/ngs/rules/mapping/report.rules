@@ -38,7 +38,7 @@ for i, log in enumerate("{input.b2_logs}".split()):
                  "overall_alignment_rate":logl[-1].split()[0]}}
     # add markduplicate metrics
     metl = [s.strip() for s in open(md_logs[i]).readlines()]
-    json_out.update({{h:metl[8].split("\\t")[i] for i,h in enumerate(metl[6].split("\\t")[1:])}})
+    json_out.update({{h:metl[8].split("\\t")[i+1] for i,h in enumerate(metl[6].split("\\t")[1:])}})
 
     sys.stdout.write(json.dumps(json_out))
 print "]"
