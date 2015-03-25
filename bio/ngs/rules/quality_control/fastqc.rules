@@ -50,7 +50,7 @@ rule fastqc:
     shell:
         """
         {config[fastqc_rules][load_env]}
-        fastqc {input}
+        fastqc --threads {config["fastqc_rules"].get("cpus",1)} {input}
         """
 
 
