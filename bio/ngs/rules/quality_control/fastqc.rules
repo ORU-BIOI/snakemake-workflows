@@ -50,7 +50,7 @@ rule fastqc:
     shell:
         """
         {config[fastqc_rules][load_env]}
-        fastqc --threads {config[fastqc_rules][cpu]} {input}
+        fastqc --threads {config[fastqc_rules][cpus]} {input}
         """
 
 
