@@ -9,7 +9,8 @@
         }
     },
     "fastqc_rules": {
-        "load_env": "module load bioinfo-tools FastQC/0.11.1"
+        "load_env": "module load bioinfo-tools FastQC/0.11.1",
+	"cpus": "16"
     },
     "bowtie2_rules": {
         "platform": "Illumina",

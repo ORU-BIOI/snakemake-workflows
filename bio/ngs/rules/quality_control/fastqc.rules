@@ -47,10 +47,12 @@ rule fastqc:
     output:
         "{prefix}_fastqc.zip",
         "{prefix}_fastqc.html"
+    params:
+        t=config["fastqc_rules"].get("cpus",1)
     shell:
         """
         {config[fastqc_rules][load_env]}
-        fastqc --threads {config[fastqc_rules][cpus]} {input}
+        fastqc --threads {params.t} {input}
         """
 
 
