@@ -48,7 +48,7 @@ rule fastqc:
         "{prefix}_fastqc.zip",
         "{prefix}_fastqc.html"
     params:
-        threads: config["fastqc_rules"].get("cpus",1)
+        threads: (lambda: config["fastqc_rules"].get("cpus",1))()
     shell:
         """
         {config[fastqc_rules][load_env]}
